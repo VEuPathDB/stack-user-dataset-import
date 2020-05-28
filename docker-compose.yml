@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: user-ds-import-pg
+    build:
+      context: .
+      dockerfile: ./pgDockerfile
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=1234
+    networks:
+      - internal
+
+volumes:
+  pg-data:
+
+networks:
+  internal:
+    external: false
+  traefik:
+    external: true
