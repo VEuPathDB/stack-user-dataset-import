@@ -10,7 +10,7 @@ services:
 
   # BIOM form handler
   biom-handler:
-    container_name: biom-handler
+    container_name: user-dataset-biom-handler
     build:
       context: ./dataset-handlers/biom
       dockerfile: Dockerfile
@@ -29,7 +29,7 @@ services:
 
   # Datastore
   postgres:
-    container_name: user-ds-import-pg
+    container_name: user-dataset-import-datastore
     build:
       context: .
       dockerfile: ./pgDockerfile
@@ -47,7 +47,7 @@ services:
 
   # Import Service
   importer:
-    container_name: import-service
+    container_name: user-dataset-import-service
     build:
       context: ./import-service
       dockerfile: Dockerfile
