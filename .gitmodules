@@ -1,3 +1,0 @@
-[submodule "dataset-handlers"]
-	path = dataset-handlers
-	url = git@github.com:VEuPathDB/dataset-handlers

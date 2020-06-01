@@ -1,6 +1,30 @@
 version: "3.8"
 
 services:
+
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  #                                                        #
+  # Dataset Handlers                                       #
+  #                                                        #
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+
+  # BIOM form handler
+  biomHandler:
+    container_name: biom-handler
+    build:
+      context: ./dataset-handlers/biom
+      dockerfile: ./dataset-handlers/biom/Dockerfile
+    networks:
+      - internal
+
+
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  #                                                        #
+  # Import Service                                         #
+  #                                                        #
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+
+  # Datastore
   postgres:
     container_name: user-ds-import-pg
     build:
