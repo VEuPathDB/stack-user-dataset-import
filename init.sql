@@ -70,14 +70,6 @@ CREATE TABLE IF NOT EXISTS jobs
 
 CREATE INDEX IF NOT EXISTS jobs_user_id ON jobs (user_id);
 
-CREATE TABLE IF NOT EXISTS job_files
-(
-  db_id      INT         NOT NULL
-    REFERENCES jobs (db_id) ON DELETE CASCADE,
-  file       VARCHAR(32) NOT NULL,
-  total_size BIGINT      NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS job_projects
 (
   db_id      INT NOT NULL
