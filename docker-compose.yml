@@ -9,13 +9,13 @@ services:
   #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
 
   # BIOM form handler
-  biomHandler:
+  biom-handler:
     container_name: biom-handler
     build:
       context: ./dataset-handlers/biom
-      dockerfile: ./dataset-handlers/biom/Dockerfile
+      dockerfile: Dockerfile
     deploy:
-      restart-policy:
+      restart_policy:
         condition: on-failure
     networks:
       - internal
@@ -34,7 +34,7 @@ services:
       context: .
       dockerfile: ./pgDockerfile
     deploy:
-      restart-policy:
+      restart_policy:
         condition: on-failure
     volumes:
       - pg-data:/var/lib/postgresql/data
@@ -50,16 +50,16 @@ services:
     container_name: import-service
     build:
       context: ./import-service
-      dockerfile: ./import-service/Dockerfile
+      dockerfile: Dockerfile
     deploy:
-      restart-policy:
+      restart_policy:
         condition: on-failure
     networks:
       - internal
       - traefik
     depends_on:
       - postgres
-      - biomHandler
+      - biom-handler
     environment:
       # iRODS Connection Info
       IRODS_HOST:
@@ -74,7 +74,6 @@ services:
 
       # Account DB Connection Info
       ACCT_DB_HOST:
-      ACCT_DB_PORT:
       ACCT_DB_USER:
       ACCT_DB_PASS:
       ACCT_DB_NAME:
