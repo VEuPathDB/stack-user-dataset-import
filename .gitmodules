@@ -1,0 +1,6 @@
+[submodule "dataset-handlers"]
+	path = dataset-handlers
+	url = https://github.com/VEuPathDB/dataset-handlers.git
+[submodule "import-service"]
+	path = import-service
+	url = https://github.com/VEuPathDB/service-user-dataset-import.git
