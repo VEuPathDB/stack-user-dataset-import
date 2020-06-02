@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS status
 INSERT INTO
   status (name)
 VALUES
-  ('receiving-from-client'),
+  ('awaiting-upload'),
   ('sending-to-handler'),
   ('handler-unpacking'),
   ('handler-processing'),

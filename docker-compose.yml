@@ -48,15 +48,15 @@ services:
   # Import Service
   importer:
     container_name: user-dataset-import-service
-    build:
-      context: ./import-service
-      dockerfile: Dockerfile
+    image: veupathdb/user-dataset-import-service
     deploy:
       restart_policy:
         condition: on-failure
     networks:
       - internal
-      - traefik
+      # - traefik
+    ports:
+      - 8080:8080
     depends_on:
       - postgres
       - biom-handler
@@ -90,5 +90,5 @@ volumes:
 networks:
   internal:
     external: false
-  traefik:
-    external: true
+  # traefik:
+    # external: true
