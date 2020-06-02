@@ -38,8 +38,6 @@ services:
         condition: on-failure
     volumes:
       - pg-data:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
     environment:
       - POSTGRES_PASSWORD=1234
     networks:
