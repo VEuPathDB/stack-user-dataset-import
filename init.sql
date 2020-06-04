@@ -17,7 +17,7 @@ VALUES
   ('FungiDB'),
   ('GiardiaDB'),
   ('HostDB'),
-  ('MicroBiomeDB'),
+  ('MicrobiomeDB'),
   ('MicrosporidiaDB'),
   ('OrthoMCL'),
   ('PiroplasmaDB'),
