@@ -12,21 +12,21 @@ INSERT INTO
   project (name)
 VALUES
   ('AmoebaDB'),
-  ('ClinepiDB'),
+  ('ClinEpiDB'),
   ('CryptoDB'),
   ('FungiDB'),
   ('GiardiaDB'),
   ('HostDB'),
-  ('MicrobiomeDB'),
+  ('MicroBiomeDB'),
   ('MicrosporidiaDB'),
-  ('Orthomcl'),
+  ('OrthoMCL'),
   ('PiroplasmaDB'),
   ('PlasmoDB'),
   ('SchistoDB'),
   ('ToxoDB'),
   ('TrichDB'),
   ('TritrypDB'),
-  ('Vectorbase');
+  ('VectorBase');
 
 CREATE TABLE IF NOT EXISTS status
 (
