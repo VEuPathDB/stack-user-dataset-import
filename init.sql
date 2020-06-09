@@ -44,6 +44,7 @@ VALUES
   ('handler-packing'),
   ('receiving-from-handler'),
   ('sending-to-datastore'),
+  ('datastore-unpacking')
   ('success'),
   ('rejected'),
   ('errored');
@@ -83,4 +84,11 @@ CREATE TABLE IF NOT EXISTS job_messages
   db_id   INT   NOT NULL
     REFERENCES jobs (db_id) ON DELETE CASCADE,
   message JSONB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS job_irods_id
+(
+  db_id INT NOT NULL UNIQUE
+    REFERENCES jobs (db_id) ON DELETE CASCADE,
+  irods_id INT NOT NULL UNIQUE
 );
