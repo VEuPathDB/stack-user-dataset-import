@@ -11,9 +11,7 @@ services:
   # BIOM form handler
   biom-handler:
     container_name: user-dataset-biom-handler
-    build:
-      context: ./dataset-handlers/biom
-      dockerfile: Dockerfile
+    image: veupathdb/user-dataset-handler-biom
     deploy:
       restart_policy:
         condition: on-failure

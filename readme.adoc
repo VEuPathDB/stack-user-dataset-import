@@ -1,0 +1,63 @@
+= User Dataset Importer Docker Stack
+:importer-url: https://github.com/VEuPathDB/service-user-dataset-import
+
+Contains the docker compose configuration and additional
+requirements to spin up the
+{importer-url}[User Dataset Import Service] and it's
+necessary dependencies.
+
+== Containers
+
+[#dataset-importer]
+=== User Dataset Import Service
+
+Repo: {importer-url}
+
+Public facing HTTP API for uploading user datasets into
+VEuPathDB iRODS.
+
+====
+.Depends On
+* <<#postgres>>
+* <<#biom-handler>>
+* User Database (Oracle)
+* iRODS
+====
+
+[#postgres]
+=== Postgres
+
+Repo: https://github.com/docker-library/postgres/tree/master/12/alpine +
+Script: https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/init.sql
+
+Internal backing datastore for maintaining the <<#dataset-importer,Dataset Importer>> state.
+
+[#biom-handler]
+=== BIOM Dataset Handler
+
+Repo: https://github.com/VEuPathDB/dataset-handler-biom
+
+Dataset handler/exporter for `biom` dataset types.
+
+
+== Environment
+
+=== iRODS Connection Info
+
+`IRODS_HOST`:: URL to the backing iRODS instance.
+`IRODS_PORT`:: {empty}
+`IRODS_USER`:: Connection credentials: username.
+`IRODS_PASS`:: Connection credentials: password.
+`IRODS_ZONE`:: {empty}
+`IRODS_RESOURCE`:: {empty}
+
+=== User token salt
+
+`AUTH_SECRET_KEY`:: User auth token salt value.
+
+=== Account DB Connection Info
+
+`ACCT_DB_HOST`:: Account database hostname.
+`ACCT_DB_USER`:: Connection credentials: username.
+`ACCT_DB_PASS`:: Connection credentials: password.
+`ACCT_DB_NAME`:: Account database name.
