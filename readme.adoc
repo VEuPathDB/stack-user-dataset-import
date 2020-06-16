@@ -1,4 +1,5 @@
 = User Dataset Importer Docker Stack
+:toc:
 :importer-url: https://github.com/VEuPathDB/service-user-dataset-import
 
 Contains the docker compose configuration and additional
