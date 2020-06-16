@@ -30,7 +30,7 @@ VEuPathDB iRODS.
 [#postgres]
 === Postgres
 
-[cols="1h,10"]
+[cols=".^1h,.^10"]
 |===
 | Repo | https://github.com/docker-library/postgres/tree/master/12/alpine
 | Script | https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/init.sql
