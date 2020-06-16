@@ -63,7 +63,7 @@ Dataset handler/exporter for `biom` dataset types.
 
 === User token salt
 
-`AUTH_SECRET_KEY`:: User auth token salt value.
+`AUTH_SECRET_KEY`:: MD5 of the user auth token salt value.
 
 === Account DB Connection Info
 
