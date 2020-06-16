@@ -33,8 +33,8 @@ VEuPathDB iRODS.
 
 [cols="1,10"]
 |===
-.2+.^h| Source | https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/pgDockerfile
-| https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/init.sql
+.2+.^h| Source | https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/pgDockerfile[./pgDockerfile]
+| https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/init.sql[./init.sql]
 |===
 
 Internal backing datastore for maintaining the <<#dataset-importer,Dataset Importer>> state.
