@@ -11,7 +11,10 @@ necessary dependencies.
 [#dataset-importer]
 === User Dataset Import Service
 
-Repo: {importer-url}
+[cols="1h,10"]
+|===
+| Repo | {importer-url}
+|===
 
 Public facing HTTP API for uploading user datasets into
 VEuPathDB iRODS.
@@ -27,15 +30,21 @@ VEuPathDB iRODS.
 [#postgres]
 === Postgres
 
-Repo: https://github.com/docker-library/postgres/tree/master/12/alpine +
-Script: https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/init.sql
+[cols="1h,10"]
+|===
+| Repo | https://github.com/docker-library/postgres/tree/master/12/alpine
+| Script | https://github.com/VEuPathDB/stack-user-dataset-import/blob/master/init.sql
+|===
 
 Internal backing datastore for maintaining the <<#dataset-importer,Dataset Importer>> state.
 
 [#biom-handler]
 === BIOM Dataset Handler
 
-Repo: https://github.com/VEuPathDB/dataset-handler-biom
+[cols="1h,10"]
+|===
+| Repo | https://github.com/VEuPathDB/dataset-handler-biom
+|===
 
 Dataset handler/exporter for `biom` dataset types.
 
