@@ -44,7 +44,7 @@ VALUES
   ('handler-packing'),
   ('receiving-from-handler'),
   ('sending-to-datastore'),
-  ('datastore-unpacking')
+  ('datastore-unpacking'),
   ('success'),
   ('rejected'),
   ('errored');
